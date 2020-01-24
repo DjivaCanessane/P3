@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         rcvCharacter.life = rcvCharacter.life - weapon.damage
         
     }
+    
 
     let textField: UITextField = UITextField()
     @IBOutlet weak var mainButton: UIButton!

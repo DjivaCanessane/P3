@@ -10,13 +10,21 @@ import Foundation
 
 class Weapon {
     var damage: Int
-    var type: String
     var consumedEnergy: Int
     
-    init(damage: Int, type: String, consumedEnergy: Int) {
-        self.damage = damage
-        self.type = type
-        self.consumedEnergy = consumedEnergy
+    init(type: WeaponType) {
+        
+        switch type {
+        case .heavySword:
+            self.damage = 35
+            self.consumedEnergy = 40
+        case .arc:
+            self.damage = 20
+            self.consumedEnergy = 25
+        case .gun:
+            self.damage = 10
+            self.consumedEnergy = 5
+        }
     }
     
 }
