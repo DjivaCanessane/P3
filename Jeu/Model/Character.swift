@@ -12,6 +12,7 @@ class Character{
     var name: String
     var weapon: Weapon
     var life: Int = 100
+    var energy: Int = 100
     
     init(name :String, weapon: Weapon) {
         self.name = name

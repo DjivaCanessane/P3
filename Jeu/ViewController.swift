@@ -10,11 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    var playerOne: Player = Player(name: nil)
+    var playerTwo: Player = Player(name: nil)
+    
+    var charactersP1: [Character] = []
+    var charactersP2: [Character] = []
+    
+    func attack(atkCharacter: Character, rcvCharacter: Character, weapon: Weapon) {
+        
+        atkCharacter.energy = atkCharacter.energy - weapon.consumedEnergy
+        rcvCharacter.life = rcvCharacter.life - weapon.damage
+        
     }
 
-
+    let textField: UITextField = UITextField()
+    @IBOutlet weak var mainButton: UIButton!
+    @IBOutlet weak var mainLabel: UILabel!
+    
+    @IBAction func start(_ sender: Any) {
+        mainLabel.text = "Enter your name player 1"
+        
+        
+    }
+    
+    
+    
+    
 }
 
