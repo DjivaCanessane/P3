@@ -10,9 +10,10 @@ import Foundation
 
 class Player{
     var name:String?
+    var warriors: [Warrior]
     
-    init(name: String?) {
+    init(name: String?, warriors: [Warrior]) {
         self.name = name
-        
+        self.warriors = warriors
     }
 }
